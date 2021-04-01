@@ -134,6 +134,7 @@ body {
 
 .content .card .user .name span {
 	font-size: 26px;
+	padding-left: 10px;
 }
 
 .content .card .local {
