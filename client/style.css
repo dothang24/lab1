@@ -1,0 +1,222 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+header{
+    height: 100vh;
+    display: block;
+    background-size: cover;
+    background-image: url("https://tinder.com/static/build/m/744fe6d80266616aba687006b7d764ad.webp");
+    background-attachment: fixed;
+    background-position: center center;
+}
+.header-top{
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;  
+    opacity: 0.5;
+}
+
+.icon-logo{
+    width: 180px;
+    padding: 20px;  
+}
+.login .Btnlogin{
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #fd5068;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+.login .Btnlogin:hover{
+    background: #fd5068;
+    color: #fff;
+    text-decoration: none;
+}
+.laguage{
+    color: #fff;
+    margin-right: 32px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.laguage-icon{
+    margin-right: 10px;
+}
+
+.laguage:hover{
+    color: #fd5068;
+}
+
+.laguage:hover .laguage-icon{
+    fill: #fd5068;
+}
+
+.content{
+    position: absolute;
+    top: 35%;
+    right: 30%;
+    color: #fff;  
+}
+.content h1{
+    font-size: 8vw;;
+}
+.box{
+    width: 300px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.text-center a:hover{
+    color: black;
+}
+.modal-body .group .label{
+    width:100%;
+    color:#000000;
+    display:block;
+    margin-bottom: 5px;
+
+}   
+.modal-body .group .input{
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    background:rgba(0,0,0,.1);
+    width: 350px;
+    color: #000000;
+}
+.modal-body .group{
+    margin-bottom:15px;
+    text-align: left;
+}
+
+.modal-footer button{
+    background-image: linear-gradient(to right, #fd2e7a , #ff7356);
+    color: #fff;
+    border: none;
+    border-radius: 12px ;
+    font-weight: bold;
+    padding: 8px 28px;
+    text-decoration: none ;
+}
+.modal-footer button:hover{
+    color: black;
+}
+footer{
+    margin: 15px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    background: #fff;
+    height: auto;
+    width: auto;
+    padding-top: 40px;
+    color: #111;
+}
+
+.abc{
+    width: max-content;
+}
+footer section{
+    width: auto;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #111;
+}
+.socials a i{
+    font-size: 3rem;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: #fd5068; 
+}
+.footer-bottom{
+    width: auto;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform:capitalize ;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 00;
+}
+.text-uppercase{
+    font-weight: bold;
+}
+.pt-2,
+.form-outline{
+    margin-top: 15px;
+}
+.text{
+    text-decoration: none;
+    color: #1c1f23;
+}
+.text:hover{
+    color: #fd5068;
+    text-decoration: none;
+}
+#page-content{
+    margin: 15px;
+}
+.news{
+    margin: 15px;
+}
+
+
+
+
+

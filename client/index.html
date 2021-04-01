@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1</title>
+    <link rel="shortcut icon" href="images/tinder.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+
+        }
+
+        body {
+            background-image: url(video-bg-1.jpg);
+
+        }
+
+        .testimonial {
+            background: #fff;
+            height: 350px;
+            text-align: center;
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px 30px 50px;
+            margin: 0 15px 100px;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        .testimonial:before,
+        .testimonial:after {
+            content: "";
+            border-top: 40px solid #fff;
+            border-right: 125px solid transparent;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+        }
+
+        .testimonial:after {
+            border-right: none;
+            border-left: 125px solid transparent;
+            left: auto;
+            right: 0;
+        }
+
+        .testimonial .icon {
+            display: inline-block;
+            font-size: 80px;
+            color: #bd986b;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .testimonial .name {
+            font-weight: bold;
+            font-size: 20px;
+            color: black;
+            text-align: left;
+        }
+
+        .testimonial .description {
+            font-size: 16px;
+            color: #777;
+            text-align: justify;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            letter-spacing: -1px;
+        }
+
+        .testimonial .testimonial-content {
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+
+        .testimonial .pic {
+            display: inline-block;
+            border: 6px solid white;
+            margin-bottom: 5px;
+            box-shadow: 0 0 2px 2px #daad86;
+            overflow: hidden;
+            z-index: 1;
+            position: relative;
+        }
+
+        .testimonial .pic img {
+            width: 100%;
+            height: auto;
+        }
+
+        .testimonial .title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: capitalize;
+            margin: 0 0 5px 0;
+        }
+
+        .testimonial .post {
+            display: block;
+            font-size: 14px;
+            color: #ffd9b8;
+        }
+
+        .owl-theme .owl-controls {
+            margin-top: 60px;
+        }
+
+        .owl-theme .owl-controls .owl-page span {
+            width: 32px;
+            height: 10px;
+            background: #fff;
+            border: 2px solid #bd986b;
+            margin: 5px;
+            opacity: 1;
+        }
+
+        .owl-theme .owl-controls .owl-page.active span,
+        .owl-theme .owl-controls.clickable .owl-page:hover span {
+            background: #ffd9b8;
+            border-color: #fff;
+        }
+
+        .pic img {
+            width: 100px !important;
+            height: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="bg">
+        </div>
+        <div class="header-top d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <svg fill="#fff" class="icon-logo" viewBox="0 0 519 123">
+                    <g fill="#fff" fill-rule="evenodd">
+                        <title>Tinder</title>
+                        <path
+                            d="M31.5 49.6C55 41.5 59 20.4 56 1c0-.7.6-1.2 1.2-1C79.7 11 105 35 105 71c0 27.6-21.4 52-52.5 52a50 50 0 0 1-28.2-92.7c.6-.4 1.4 0 1.4.7.3 3.7 1.3 13 5.4 18.6h.4z"
+                            fill="#fff"></path>
+                        <path
+                            d="M171.2 101.1l1.7-2 5.3 16.8-.7.7c-4 3.7-10 5.6-17.7 5.6h-.3c-7 0-12.5-2-16.3-5.7-3.8-3.8-5.8-9.5-5.8-16.7V54h-13.5V35.5h13.5V13.2h20.8v22.3h16.5V54h-16.6v41.3c0 1.9.5 8 6.3 8 3 0 5.8-1.1 6.8-2.3zm11 19.2V35.6H203v84.7h-20.8zM192.5 1A12.5 12.5 0 1 1 180 13.6C180 6.8 185.7 1 192.5 1zm66.4 32.5c18 0 27.9 9.8 27.9 27.7v59H266V66.2c-.4-9.6-5-14-14.8-14-8.8 0-15.9 5.4-19.5 10v58h-20.8V35.7h20.8v9c6-5.8 15.6-11 27.2-11zM356 44.4V4.6h20.8v115.8H356v-8.8a34.3 34.3 0 0 1-24.7 10.7c-22.7 0-37.9-17.8-37.9-44.3 0-26.6 15.2-44.4 37.9-44.4A34 34 0 0 1 356 44.4zm0 17.9a25.6 25.6 0 0 0-19.6-10c-12.9 0-21.5 10.3-21.5 25.7 0 15.3 8.6 25.6 21.5 25.6 7.5 0 15.7-4 19.6-9.8V62.3zm69.4-28.7c24.6 0 41.7 19 41.7 46v5.7h-62.9c2.1 11.9 11.5 19.5 24.3 19.5 8.1 0 17-3.5 22.1-8.6L452 95l9.9 14.2-1 .9a48.6 48.6 0 0 1-34.1 12.2c-26 0-44.3-18.3-44.3-44.4a42.8 42.8 0 0 1 43-44.3zm-21.3 36h42.7c-1.2-12.7-11.7-18.5-21.4-18.5-14.6 0-20.1 11-21.3 18.6zm113.3-36h1.5v21l-1.8-.3c-1.5-.3-3.4-.5-5.3-.5-6.7 0-16 4.7-19.5 9.7v56.7h-20.8V35.6h20.9V45c6.9-7.2 16-11.4 25-11.4z"
+                            fill="#fff"></path>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="header-top-right d-flex justify-content-between align-items-center p-4">
+                <div class="laguage">
+
+                    <svg fill="#fff " class="laguage-icon" viewBox="0 0 24 24" width="24px" height="24px"
+                        focusable="false" aria-hidden="true" role="presentation">
+                        <path fill=""
+                            d="M17.9,17.39C17.64,16.59 16.89,16 16,16H15V13A1,1 0 0,0 14,12H8V10H10A1,1 0 0,0 11,9V7H13A2,2 0 0,0 15,5V4.59C17.93,5.77 20,8.64 20,12C20,14.08 19.2,15.97 17.9,17.39M11,19.93C7.05,19.44 4,16.08 4,12C4,11.38 4.08,10.78 4.21,10.21L9,15V16A2,2 0 0,0 11,18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                        </path>
+                    </svg>
+                    TIẾNG VIỆT
+                </div>
+                <div class="login">
+                    <a href="#signin" type="button" class="Btnlogin" data-bs-toggle="modal">Đăng Nhập</a>
+
+                    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <!-- <h5 class="modal-title" id="exampleModalLabel">ĐĂNG NHẬP</h5> -->
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <section class="login-clean">
+                                        <form method="post">
+                                            <h2>Login Form</h2>
+                                            <div class="illustration">
+                                                ...
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="email" class="form-control" type="email" name="email"
+                                                    placeholder="Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="password" class="form-control" type="password"
+                                                    name="password" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btnLogin" type="submit">Log In</button>
+                                            </div>
+                                            <div class="form-group">
+                                                <a class="" href="#">Forgot your email or password</a>
+                                            </div>
+                                        </form>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <h1>Swipe Right</h1>
+        <div class="text-center">
+            <a id="btn-blur" href="#signup" type="button" class="btnSignUp" data-bs-toggle="modal">Lập Tài Khoản</a>
+
+            <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="sign-up-htm">
+
+                                <form class="was-validated">
+                                    <div class="group">
+                                        <label for="user" class="label">Họ Và Tên</label>
+                                        <input id="fullname" type="text" class="form-control is-invalid" placeholder=""
+                                            required>
+
+                                    </div>
+                                    <div class="group">
+                                        <label for="user" class="label">Ngày Sinh</label>
+                                        <input id="birthday" type="date" class="form-control is-invalid" placeholder=""
+                                            required>
+
+                                    </div>
+                                    <div class="group">
+                                        <label for="user" class="label">Email</label>
+                                        <input id="email" type="email" class="form-control is-invalid" placeholder=""
+                                            required>
+
+                                    </div>
+                                    <div class="group">
+                                        <label for="user" class="label">Số Điện Thoại</label>
+                                        <input id="number" type="tel" class="form-control is-invalid" placeholder=""
+                                            required>
+
+                                    </div>
+                                    <div class="group">
+                                        <label for="validationTextarea" class="label">Giới Thiệu</label>
+                                        <textarea class="form-control is-invalid" id="validationTextarea" placeholder=""
+                                            required></textarea>
+
+                                    </div>
+                                    <div class="group">
+                                        <label for="user" class="label">Giới Tính</label>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="validationFormCheck2"
+                                                name="radio-stacked" required>
+                                            <label class="form-check-label" for="validationFormCheck2">Nam</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="validationFormCheck3"
+                                                name="radio-stacked" required>
+                                            <label class="form-check-label" for="validationFormCheck3">Nữ</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <label for="validationTextarea" class="label">Ảnh Của Bạn</label>
+                                        <input type="file" class="form-control" aria-label="file example" required>
+                                    </div>
+                                    <div class="form-check group">
+                                        <input type="checkbox" class="form-check-input" id="validationFormCheck1"
+                                            required>
+                                        <label class="form-check-label" for="validationFormCheck1">Đồng Ý</label>
+                                        <div class="invalid-feedback">Bạn Có Đồng Ý Với Tất Cả Điều Khoảng Của Công Ty
+                                            Về Ứng Dụng Không?</div>
+                                    </div>
+                                </form>
+                                <div class="hr"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button">Đăng Nhập</button>
+                                <button type="button" data-bs-dismiss="modal">Thoát</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="demo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="testimonial-slider" class="owl-carousel">
+                        <div class="testimonial">
+                            <p class="name">Đỗ Cao Thắng</p>
+                            <hr>
+                            <p class="description">
+                                Khi quay về cố hương, tôi cảm thấy cô đơn, lạc lõng vì hầu hết bạn bè đều đã bắt đầu có
+                                những mối quan hệ lãng mạn từ khi tôi còn ở nước ngoài. Cả hai chúng tôi đã quyết định
+                                tải về Tinder và xem chuyện gì sẽ xảy ra.
+
+                                Nếu không có ứng dụng này, có thể chúng tôi đã chẳng bao giờ có cơ hội gặp mặt và bắt
+                                đầu một hành trình đầy điên rồ nhưng cũng rất tuyệt vời này. Cám ơn các bạn đã đưa chúng
+                                tôi đến với nhau cũng như nhiều cặp đôi khác trên khắp thế giới. Tôi sẽ mãi biết ơn về
+                                điều đó.
+                            </p>
+                            <!-- <div class="testimonial-content">
+                                <div class="pic"><img src="images/images.jpg" class="" alt=""></div>
+                                <h3 class="title">williamson</h3>
+                                <span class="post">Web Developer</span>
+                            </div> -->
+                        </div>
+                        <div class="testimonial">
+                            <p class="name">Nguyễn Đình Dũng</p>
+                            <hr>
+                            <p class="description">
+                                Nhờ có Tinder, tôi đã tìm thấy người yêu của đời mình và chúng tôi sắp kết hôn.
+
+                                Sau khi trải qua vài buổi hẹn hò và mấy buối tối vui vẻ, tôi tình cờ gặp được Miranda.
+                                Sau khi đọc hồ sơ của cô ấy, tôi đã không thể không vuốt phải chọn cô ấy sau khi đọc câu
+                                kết trong đó… 'Đang tìm kiếm nửa còn lại của đời tôi.' Sau khi trò chuyện khoảng một
+                                tuần, chúng tôi tiến tới cuộc hẹn gặp đầu tiên và tôi biết ở cô ấy có điều gì đó rất đặc
+                                biệt!
+                            </p>
+                        </div>
+                        <div class="testimonial">
+                            <p class="name">Vũ Văn Phòng</p>
+                            <hr>
+                            <p class="description">
+                                CÁM ƠN CÁC BẠN vì đã tạo điều kiện để tôi có thể gặp được tri kỷ của đời mình. Năm phút
+                                sau khi bắt đầu cuộc trò chuyện đầu tiên của chúng tôi, nàng, người hiện tại là bà xã
+                                của tôi đã nói về chuyện chúng tôi sẽ có một đám cưới tuyệt vời đến nhường nào.
+                            </p>
+                        </div>
+
+                        <div class="testimonial">
+                            <p class="name">Trương Quang Long</p>
+                            <hr>
+                            <p class="description">
+                                Sau vài tháng hẹn nhau mối quan hệ của chúng tôi tới một ngả rẽ và chúng tôi quyết định
+                                ngưng cái trò mèo vờn chuột. Tôi đã yêu người ấy nhưng cứ sợ chuyện tình này sẽ chẳng đi
+                                tới đâu. Vậy mà 9 tháng sau chúng tôi đã trở nên dính nhau như sam.
+                            </p>
+                        </div>
+                        <div class="testimonial">
+                            <p class="name">Nguyễn Quang Chiến</p>
+                            <hr>
+                            <p class="description">
+                                Anh ấy làm tôi rất khó chịu với một trong những câu bắt chuyện TỒI TỆ NHẤT mà tôi từng
+                                thấy, nhưng vì đang buồn chán tại nơi làm việc, tôi quyết định trả lời. Từ lúc đó chúng
+                                tôi đã không ngừng trò chuyện, hẹn hò và yêu nhau sâu đậm hơn.
+                            </p>
+                        </div>
+                        <div class="testimonial">
+                            <p class="name">Cao Tiến Đạt</p>
+                            <hr>
+                            <p class="description">
+                                …vừa bước ra từ cuộc tình không mấy vui vẻ và tạo tài khoản Tinder giúp tâm trí tôi khỏi
+                                lan man về cuộc chia tay ấy. Sau khoảng một tuần trò chuyện, chúng tôi quyết định gặp gỡ
+                                và làm vài ly tại một quán bar địa phương… chúng tôi đã quyết định gắn kết cuộc đời với
+                                nhau trong một buổi lễ với 18 khách mời tại New Jersey vào ngày 27 tháng 6, 2020.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <hr>
+            <section class="text-start">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 abc">
+                        <h5 class="text-uppercase">AN TOÀN</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text">Quy tắc công đồng</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Một vài lời khuyên về an toàn</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">An toàn và chính sách</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Bảo mật</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 abc">
+                        <h5 class="text-uppercase">PHÁP LÝ</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text">Quyền riêng tư</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Điều khoản</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Chính sách Cookie</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Sỡ hữu trí tuệ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 abc">
+                        <h5 class="text-uppercase">NGHỀ NGHIỆP</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text">Cổng thông tin nghề nghệp</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Blog Công nghệ</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 abc">
+                        <h5 class="text-uppercase">KHÁC</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text">Phòng Báo Chí</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Liên hệ</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Gói thuê bao đăng ký</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Hỗ trợ</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text">Mã khuyễn mãi</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- <section class="news">
+                    <form action="">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-auto">
+                                <p class="pt-2">
+                                    <strong>Đăng ký để nhận những tin tức mới nhất từ chúng tôi: </strong>
+                                </p>
+                            </div>
+                            <div class="col-md-5 col-12">
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" id="form5Example2" class="form-control"
+                                        placeholder="Hãy nhập địa chỉ email: ..." />
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-outline-light mb-4">
+                                    ĐĂNG KÝ
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </section> -->
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+                
+            </section>
+        </div>
+        <div class="footer-bottom">
+
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#testimonial-slider").owlCarousel({
+                items: 3,
+                itemsDesktop: [1000, 3],
+                itemsDesktopSmall: [979, 2],
+                itemsTablet: [768, 2],
+                itemsMobile: [650, 1],
+                pagination: true,
+                autoPlay: true
+            });
+        });
+    </script>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
